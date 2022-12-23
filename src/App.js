@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import NavBar from './components/NavBar'
+import SideBar from './components/SideBar'
+import TqmButton from './components/home_page/TqmButton'
+import HomeAll from './components/HomeAll'
+import TQM from './components/TQM-Page/TQM'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+    <NavBar/>
     </div>
-  );
+    <div>
+   <SideBar/>
+   </div>
+   <div>
+   
+   </div>
+   <div>
+   <HomeAll/>
+  </div>
+  </>
+  )
 }
 
-export default App;
+export default App
